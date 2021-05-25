@@ -1,0 +1,32 @@
+<!doctype html>
+</html>
+<head>
+    <title>
+        This is a title of Index Page
+    </title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <div class="main-container">
+
+
+{{>header}}
+
+<p>Created by {{name}}</p>  
+<form>
+    <input placeholder="Location"/>
+    <button type="submit">Search</button>
+
+
+</form>
+    <p id="Forecast"></p>
+<p id="location"></p>
+<p id="address"></p>
+
+ </div>
+    
+{{>footer}}
+<script src="./js/App.js"></script>
+</body>
+</html>
