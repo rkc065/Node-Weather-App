@@ -1,5 +1,5 @@
-const geocode=require('./Utils/geocode.js')
-const forcast=require('./Utils/forecast.js')
+const geocode=require('./utils/geocode.js')
+const forcast=require('./utils/forecast.js')
 // geocode('Jamshedpur',(error,data)=>{
 //     console.log('Error',error);
 //     console.log('data' ,data);

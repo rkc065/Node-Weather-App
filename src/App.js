@@ -1,17 +1,17 @@
 const path=require('path');
 const express = require('express')
 const hbs=require('hbs')
-const forecast=require('./Utils/forecast')
-const geocode=require('./Utils/geocode')
+const forecast=require('./utils/forecast')
+const geocode=require('./utils/geocode')
 
 const app = express()
 
 const port=process.env.PORT || 3000
 // Define paths for Express config
 
-const public_dir_path=path.join(__dirname,'../Public')
-const view_directory=path.join(__dirname,'../Templates/Views')
-const partial_dir=path.join(__dirname,'../Templates/Partials')
+const public_dir_path=path.join(__dirname,'../public')
+const view_directory=path.join(__dirname,'../templates/views')
+const partial_dir=path.join(__dirname,'../templates/partials')
 
 // Setup handlebars engine and views location
 app.set('view engine','hbs')
@@ -43,7 +43,7 @@ app.get('/help',(req,res)=>{
 })
 
 
-app.get('/Weather',(req,res)=>{
+app.get('/weather',(req,res)=>{
     console.log(req.query)
     if(!req.query.address)
     {
@@ -76,7 +76,7 @@ app.get('/Weather',(req,res)=>{
 
 
 
-app.get('/Help/*',(req,res)=>{
+app.get('/help/*',(req,res)=>{
     res.render('404',{
     title:'Error 404 Page Not Found',
     name:'Robin',
