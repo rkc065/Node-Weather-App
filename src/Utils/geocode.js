@@ -17,9 +17,12 @@ const geocode = (address, callback) => {
             Longitude:body.features[0].center[0],
             Latitude:body.features[0].center[1],
             location:body.features[0].place_name
+            
+
         })
     }
     })
+    
     //console.log('hello');
 }
 // geocode('ranchi',(error,data)=>{
