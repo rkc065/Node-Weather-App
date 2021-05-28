@@ -18,7 +18,7 @@ app.set('view engine','hbs')
 app.set('views',view_directory)
 hbs.registerPartials(partial_dir)
 
-app.use('/static',express.static(public_dir_path))
+app.use(express.static(public_dir_path))
 app.get('',(req,res)=>{
     res.render('index',{
         title:'This is index page',
